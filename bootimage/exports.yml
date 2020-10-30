@@ -1,0 +1,11 @@
+SceKernelBootimage:
+  attributes: 0
+  imagemodule: true
+  version:
+    major: 0x1
+    minor: 0x1
+  modules:
+    SceKernelBootimage:
+      nid: 0x17E65BD7
+      variables:
+        - info: 0x9C08E88A
