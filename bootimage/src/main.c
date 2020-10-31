@@ -28,8 +28,8 @@ const
 	}
 
 const SceKernelBootimageModules module_list[] = {
-	MODULE_ENTRY("sd0:kd/test_plugin.skprx", __modules_test_plugin_velf),
-	MODULE_ENTRY("sd0:kd/test_plugin2.skprx", __modules_test_plugin2_velf)
+	MODULE_ENTRY("sd0:kd/test_plugin.skprx", ___modules_test_plugin_velf),
+	MODULE_ENTRY("sd0:kd/test_plugin2.skprx", ___modules_test_plugin2_velf)
 };
 
 const SceKernelBootimageInfo info = {
