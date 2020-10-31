@@ -1,4 +1,11 @@
 
+include(){
+  rm ../src/$2.h
+  cp ./$1/$2.velf ../modules/$2.velf
+  xxd -i ../modules/$2.velf > ../src/$2.h
+  rm ../modules/$2.velf
+}
+
 if [ ! -d build ]; then
   mkdir build
 fi
@@ -8,15 +15,8 @@ cd build
 cmake ../modules/
 make
 
-rm ../src/test_plugin.h
-cp ./test_plugin/test_plugin.velf ../modules/test_plugin.velf
-xxd -i ../modules/test_plugin.velf > ../src/test_plugin.h
-rm ../modules/test_plugin.velf
-
-rm ../src/test_plugin2.h
-cp ./test_plugin2/test_plugin2.velf ../modules/test_plugin2.velf
-xxd -i ../modules/test_plugin2.velf > ../src/test_plugin2.h
-rm ../modules/test_plugin2.velf
+include test_plugin test_plugin
+include test_plugin2 test_plugin2
 
 cd ../
 
