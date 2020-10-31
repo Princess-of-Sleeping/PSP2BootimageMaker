@@ -17,9 +17,9 @@ typedef struct SceKernelBootimageInfo {
 } SceKernelBootimageInfo;
 
 const
-#include "test_plugin.h"
+#include "./modules/test_plugin.h"
 const
-#include "test_plugin2.h"
+#include "./modules/test_plugin2.h"
 
 #define MODULE_ENTRY(module_path, module_data) { \
 		.path = module_path,             \
